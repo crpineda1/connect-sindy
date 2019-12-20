@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
+  }
+  
+  h1 {
+    margin: 0 0 15px;
+    padding: 15px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #1f90ff;
+  }
+  
+  
+  .board {
+    display: flex;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    align-items: center;
+    
+  }
+  
+  .field {
+    
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 75px 0 0 0;
+    box-sizing: border-box;
+    width: 420px;
+    height: 435px;
+    overflow: hidden;
+    cursor: wait;
+    align-items: center;
+  }
+  
+  .grid {
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: relative;
+    min-width: 420px;
+    height: 360px;
+    counter-reset: player 1;
+  }
+  
+  .column {
+    display: inline-flex;
+    flex-flow: column wrap;
+    height:420px;
+    
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+ 
+  
+  /* Disc */
+  .disc {
+    border-style: solid;
+    border-width: 5px;
+    
+
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    color: blue;
+    background-image: radial-gradient(white, rgba(133, 133, 252, 0.342), blue);
+    /* background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png"); */
+    /* opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s; */
+    z-index:10
+  }
+  
+  .blank {
+    border-style: solid;
+    border-width: 1px;
+    
+
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    /* color: #fff; */
+    /* background: radial-gradient(circle, currentcolor 12px, #666 13px, currentcolor 14px, currentcolor 21px, #666 22px, transparent 23px, transparent) center/60px;
+    opacity: 0; */
+    pointer-events: none;
+    transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s;
+  }
+  
+
+  #1{
+    background-image: url("images/cow1.jpeg");
+    z-index:8;
+
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Button style */
+  button {
+    margin: 20px auto;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background: #2196f3 center;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    transition: background 0.5s;
+  }
+   
+  button:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+  @keyframes outcome {
+    0% {
+      opacity: 0;
+    }
+    35% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
