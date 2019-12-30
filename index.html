@@ -10,78 +10,115 @@
 
 
     <body>
-        <div id="board"></div>
+        <div id = "turn">Current Turn: Player 1 </div>
+        <br>
+
+        <div id="board">
+            <!-- Column 0 -->
             <div class="column">
-                <div data-x = "1" data-y = "1" id = "1" class="disc"></div>
-                <div data-x = "1" data-y = "2" class="disc"></div>
-                <div data-x = "1" data-y = "3" class="disc"></div>
-                <div data-x = "1" data-y = "4" class="disc"></div>
-                <div data-x = "1" data-y = "5" class="disc"></div>
-                <div data-x = "1" data-y = "6" class="disc"></div>
+                <div data-x = "0" data-y = "0" id = "" ></div>
+                <div data-x = "0" data-y = "1" id = "" ></div>
+                <div data-x = "0" data-y = "2" id = "" ></div>
+                <div data-x = "0" data-y = "3" id = "" ></div>
+                <div data-x = "0" data-y = "4" id = "" ></div>
+                <div data-x = "0" data-y = "5" id = "" ></div>
+                <div data-x = "0" data-y = "6" id = "" ></div>
+                <div data-x = "0" data-y = "7" id = "" ></div>
+            </div>
+            <!-- Column 1 -->
+            <div class="column">
+                <div data-x = "1" data-y = "0" id = "" ></div>
+                <div data-x = "1" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "7" id = "" ></div>
             <!-- </div> -->
             <!--Column 2 -->
-            <!-- <div class="column"> -->
-                <div data-x = "2" data-y = "1" class="disc"></div>
-                <div data-x = "2" data-y = "2" class="disc"></div>
-                <div data-x = "2" data-y = "3" class="disc"></div>
-                <div data-x = "2" data-y = "4" class="disc"></div>
-                <div data-x = "2" data-y = "5" class="disc"></div>
-                <div data-x = "2" data-y = "6" class="disc"></div>
+            <div class="column">
+                <div data-x = "2" data-y = "0" id = "" ></div>
+                <div data-x = "2" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "7" id = "" ></div>
             <!-- </div> -->
             <!--Column 3 -->
             <div class="column">
-                <div data-x = "3" data-y = "1" class="disc"></div>
-                <div data-x = "3" data-y = "2" class="disc"></div>
-                <div data-x = "3" data-y = "3" class="disc"></div>
-                <div data-x = "3" data-y = "4" class="disc"></div>
-                <div data-x = "3" data-y = "5" class="disc"></div>
-                <div data-x = "3" data-y = "6" class="disc"></div>
-            <!-- </div> -->
+                <div data-x = "3" data-y = "0" id = "" ></div>
+                <div data-x = "3" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "7" id = "" ></div>
+                <!-- </div> -->
             <!--Column 4 -->
             <div class="column">
-                <div data-x = "4" data-y = "1" class="disc"></div>
-                <div data-x = "4" data-y = "2" class="disc"></div>
-                <div data-x = "4" data-y = "3" class="disc"></div>
-                <div data-x = "4" data-y = "4" class="disc"></div>
-                <div data-x = "4" data-y = "5" class="disc"></div>
-                <div data-x = "4" data-y = "6" class="disc"></div>
-            <!-- </div> -->
+                <div data-x = "4" data-y = "0" id = "" ></div>
+                <div data-x = "4" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "7" id = "" ></div>
+                <!-- </div> -->
             <!--Column 5 -->
             <div class="column">
-                <div data-x = "5" data-y = "1" class="disc"></div>
-                <div data-x = "5" data-y = "2" class="disc"></div>
-                <div data-x = "5" data-y = "3" class="disc"></div>
-                <div data-x = "5" data-y = "4" class="disc"></div>
-                <div data-x = "5" data-y = "5" class="disc"></div>
-                <div data-x = "5" data-y = "6" class="disc"></div>
+                <div data-x = "5" data-y = "0" id = "" ></div>
+                <div data-x = "5" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "7" id = "" ></div>
             <!-- </div> -->
             <!--Column 6 -->
-            <!-- <div class="column"> -->
-                <div data-x = "6" data-y = "1" class="disc"></div>
-                <div data-x = "6" data-y = "2" class="disc"></div>
-                <div data-x = "6" data-y = "3" class="disc"></div>
-                <div data-x = "6" data-y = "4" class="disc"></div>
-                <div data-x = "6" data-y = "5" class="disc"></div>
-                <div data-x = "6" data-y = "6" class="disc"></div>
-            <!-- </div> -->
+            <div class="column">
+                <div data-x = "6" data-y = "0" id = "" ></div>
+                <div data-x = "6" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "7" id = "" ></div>
+                <!-- </div> -->
             <!--Column 7 -->
             <div class="column">
-                <div data-x = "7" data-y = "1" class="disc"></div>
-                <div data-x = "7" data-y = "2" class="disc"></div>
-                <div data-x = "7" data-y = "3" class="disc"></div>
-                <div data-x = "7" data-y = "4" class="disc"></div>
-                <div data-x = "7" data-y = "5" class="disc"></div>
-                <div data-x = "7" data-y = "6" class="disc"></div>
-            <div class="column"></div>
+                <div data-x = "7" data-y = "0" id = "" ></div>
+                <div data-x = "7" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "2" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "3" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "4" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "5" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "6" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "7" id = "" ></div>
+                <!-- Column 8 -->
+            <div class="column">
+                <div data-x = "8" data-y = "0" id = "" ></div>
+                <div data-x = "8" data-y = "1" id = "" ></div>
+                <div data-x = "8" data-y = "2" id = "" ></div>
+                <div data-x = "8" data-y = "3" id = "" ></div>
+                <div data-x = "8" data-y = "4" id = "" ></div>
+                <div data-x = "8" data-y = "5" id = "" ></div>
+                <div data-x = "8" data-y = "6" id = "" ></div>
+                <div data-x = "8" data-y = "7" id = "" ></div>
+            </div>
             </div></div></div></div></div></div></div>
         </div>
 
         <div>
         <button id = "newGame" type="button">New Game</button>
         </div>
-        <div>
-        <button id = "reset" type="button">Reset</button>
-        </div>
+        
        
 
     <script type="text/javascript" src='index.js'></script>
