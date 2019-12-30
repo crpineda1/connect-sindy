@@ -207,9 +207,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         window.location.reload()
     })
 
+
+
     function checkWin (current, turn) {
-        let count = 1
-        console.log(count)
+        let countV = 1 // BC
+        let countH = 1 // ML + MR
+        let countD = 1 // TL + BR
+        let countU = 1 // BL + TR
+
+
+
+
+        
         let x = parseInt(current.dataset.x)
         let y = parseInt(current.dataset.y)
 
@@ -236,26 +245,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         if (player === TL.id) {
-            count = count +1
-            console.log(count)
+            countD = countD +1
+            console.log("TL1:",countD)
 
             let x2 = parseInt(TL.dataset.x)
             let y2 = parseInt(TL.dataset.y)
             let TL2 = document.querySelector(`[data-x='${x2-1}'][data-y='${y2-1}']`)
 
             if (player === TL2.id) {
-                count = count +1
-                console.log(count)
+                countD = countD +1
+                console.log("TL2:",countD)
 
                 let x3 = parseInt(TL2.dataset.x)
                 let y3 = parseInt(TL2.dataset.y)
                 let TL3 = document.querySelector(`[data-x='${x3-1}'][data-y='${y3-1}']`)
                
                 if (player === TL3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countD = countD +1
+                    console.log("TL3:",countD)  
                     
                 }else{
                     null
@@ -265,31 +272,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 null
             }
 
+    
+
         }else{
             null
         }
 
         if (player === TR.id) {
-            count = count +1
-            console.log(count)
+            countU = countU +1
+            console.log("TR1:",countU)
 
             let x2 = parseInt(TR.dataset.x)
             let y2 = parseInt(TR.dataset.y)
             let TR2 = document.querySelector(`[data-x='${x2+1}'][data-y='${y2-1}']`)
 
             if (player === TR2.id) {
-                count = count +1
-                console.log(count)
+                countU = countU +1
+                console.log("TR2:",countU)
 
                 let x3 = parseInt(TR2.dataset.x)
                 let y3 = parseInt(TR2.dataset.y)
                 let TR3 = document.querySelector(`[data-x='${x3+1}'][data-y='${y3-1}']`)
                
                 if (player === TR3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countU = countU +1
+                    console.log("TR3:",countU)  
                     
                 }else{
                     null
@@ -304,26 +311,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (player === ML.id) {
-            count = count +1
-            console.log(count)
+            countH = countH +1
+            console.log("ML1:",countH)
 
             let x2 = parseInt(ML.dataset.x)
             let y2 = parseInt(ML.dataset.y)
             let ML2 = document.querySelector(`[data-x='${x2-1}'][data-y='${y2}']`)
 
             if (player === ML2.id) {
-                count = count +1
-                console.log(count)
+                countH = countH +1
+                console.log("ML2:",countH)
 
                 let x3 = parseInt(ML2.dataset.x)
                 let y3 = parseInt(ML2.dataset.y)
                 let ML3 = document.querySelector(`[data-x='${x3-1}'][data-y='${y3}']`)
                
                 if (player === ML3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countH = countH +1
+                    console.log("ML3:",countH)  
                     
                 }else{
                     null
@@ -338,26 +343,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (player === MR.id) {
-            count = count +1
-            console.log(count)
+            countH = countH +1
+            console.log("MR1:",countH)
 
             let x2 = parseInt(MR.dataset.x)
             let y2 = parseInt(MR.dataset.y)
             let MR2 = document.querySelector(`[data-x='${x2+1}'][data-y='${y2}']`)
 
             if (player === MR2.id) {
-                count = count +1
-                console.log(count)
+                countH = countH +1
+                console.log("MR2:",countH)
 
                 let x3 = parseInt(MR2.dataset.x)
                 let y3 = parseInt(MR2.dataset.y)
                 let MR3 = document.querySelector(`[data-x='${x3+1}'][data-y='${y3}']`)
                
                 if (player === MR3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countH = countH +1
+                    console.log("MR3:",countH)  
                     
                 }else{
                     null
@@ -372,26 +375,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (player === BL.id) {
-            count = count +1
-            console.log(count)
+            countU = countU +1
+            console.log("BL1:",countU)
 
             let x2 = parseInt(BL.dataset.x)
             let y2 = parseInt(BL.dataset.y)
             let BL2 = document.querySelector(`[data-x='${x2-1}'][data-y='${y2+1}']`)
 
             if (player === BL2.id) {
-                count = count +1
-                console.log(count)
+                countU = countU +1
+                console.log("BL2:",countU)
 
                 let x3 = parseInt(BL2.dataset.x)
                 let y3 = parseInt(BL2.dataset.y)
                 let BL3 = document.querySelector(`[data-x='${x3-1}'][data-y='${y3+1}']`)
                
                 if (player === BL3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countU = countU +1
+                    console.log("BL3:",countU)  
                     
                 }else{
                     null
@@ -406,26 +407,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (player === BC.id) {
-            count = count +1
-            console.log(count)
+            countV = countV +1
+            console.log("BC1:",countV)
 
             let x2 = parseInt(BC.dataset.x)
             let y2 = parseInt(BC.dataset.y)
             let BC2 = document.querySelector(`[data-x='${x2}'][data-y='${y2+1}']`)
 
             if (player === BC2.id) {
-                count = count +1
-                console.log(count)
+                countV = countV +1
+                console.log("BC2:",countV)
 
                 let x3 = parseInt(BC2.dataset.x)
                 let y3 = parseInt(BC2.dataset.y)
                 let BC3 = document.querySelector(`[data-x='${x3}'][data-y='${y3+1}']`)
                
                 if (player === BC3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countV = countV +1
+                    console.log("BC3:",countV)  
                     
                 }else{
                     null
@@ -440,26 +439,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (player === BR.id) {
-            count = count +1
-            console.log(count)
+            countD = countD +1
+            console.log("BR1:",countD)
 
             let x2 = parseInt(BR.dataset.x)
             let y2 = parseInt(BR.dataset.y)
             let BR2 = document.querySelector(`[data-x='${x2+1}'][data-y='${y2+1}']`)
 
             if (player === BR2.id) {
-                count = count +1
-                console.log(count)
+                countD = countD +1
+                console.log("BR2:",countD)
 
                 let x3 = parseInt(BR2.dataset.x)
                 let y3 = parseInt(BR2.dataset.y)
                 let BR3 = document.querySelector(`[data-x='${x3+1}'][data-y='${y3+1}']`)
                
                 if (player === BR3.id) {
-                    count = count +1
-                    console.log(count)  
-                    alert(`${turn} wins`)
-                    window.location.reload()
+                    countD = countD +1
+                    console.log("BR3:",countD)  
                     
                 }else{
                     null
@@ -472,12 +469,33 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }else{
             null
         }
-
+        console.log("countV:",countV)
+        console.log("countH:",countH)
+        console.log("countD:",countD)
+        console.log("countU:",countU)
+        if (countV >=4 || countH >=4 || countD >=4 || countU >=4) {
+            alert(`${turn} wins`)
+            window.location.reload()
+        }
+        checkTie()
     }
 
+ function checkTie() {
+    let p1Chips = parseInt(board.querySelectorAll("#p1").length)
+    let p2Chips = parseInt(board.querySelectorAll("#p2").length)
+    let allChips = p1Chips + p2Chips
 
+    if (allChips === 42) {
+        alert("You both suck... Try again!")
+        window.location.reload()
+    }
 
+ }
 
+ let rulesButton = document.getElementById('rules')
+ rulesButton.addEventListener("click", e=> {
+     alert("Make a straight line of four Sindys; the line can be vertical, horizontal or diagonal.")
+ })
 
 
 
@@ -487,45 +505,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // end of code
 
-// switch (player) {
-    //     case TL.id:        
-    //         console.log("TL has same user Id",TL.id)
-    
-    //     case TC.id:
-    //         console.log("TC has same user Id",TC.id)
-    
-            
-    
-    //     case TR.id:
-    //         console.log("TR has same user Id",TR.id)
-            
-            
-    
-    //     case ML.id:
-    //         console.log("ML has same user Id",ML.id)
-            
-            
-    
-    //     case MR.id:
-    //         console.log("MR has same user Id",MR.id)
-            
-            
-    
-    //     case BL.id:
-    //         console.log("BL has same user Id",BL.id)
-            
-            
-    
-    //     case BC.id:
-    //         console.log("BC has same user Id",BC.id)
-            
-            
-    
-    //     case BR.id:
-    //         console.log("BR has same user Id",BR.id)
-            
-            
-    
-    //     default:
-    //         break;
-    // }
