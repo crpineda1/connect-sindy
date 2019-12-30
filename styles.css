@@ -1,6 +1,11 @@
 body {
+  
     margin: 0;
     font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
+    background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/background_beach.jpeg);
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
   }
   
   h1 {
@@ -14,37 +19,25 @@ body {
   }
   
   
-  .board {
+  #board {
     display: flex;
     position: relative;
-    width: 420px;
+    left: 30px;
+    width: 490px;
     height: 420px;
     align-items: center;
+    border-style: solid;
+    border-width: 10px;
+    color: blue;
+
     
   }
   
-  .field {
-    
-    position: absolute;
-    top: 0;
-    left: 15px;
-    padding: 75px 0 0 0;
-    box-sizing: border-box;
-    width: 420px;
-    height: 435px;
-    overflow: hidden;
-    cursor: wait;
-    align-items: center;
-  }
-  
-  .grid {
-    display: inline-flex;
-    flex-flow: column wrap;
-    position: relative;
-    min-width: 420px;
-    height: 360px;
-    counter-reset: player 1;
-  }
+  /* #board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  } */
+
   
   .column {
     display: inline-flex;
@@ -53,10 +46,30 @@ body {
     
   }
   
-  #board {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+  .right {
+    border-style: solid;
+    border-right-width: 10px;
+    color: blue;
+
   }
+  
+  .left {
+    border-style: solid;
+    border-left-width: 10px;
+    color: blue;
+    height: 420px;
+    width: 0px;
+  }
+
+  .middle {
+    border-style: solid;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    color: blue;
+  }
+  
+
+
   
  
   
@@ -105,7 +118,7 @@ body {
 
   }
   
-  
+   
   
   
   
@@ -123,13 +136,13 @@ body {
     background: #2196f3 center;
     box-shadow: 0 0 4px #999;
     outline: none;
-    transition: background 0.5s;
+    
   }
    
   button:active {
     background-color: #6eb9f7;
     background-size: 100%;
-    transition: background 0s;
+
   }
   
   @keyframes outcome {
