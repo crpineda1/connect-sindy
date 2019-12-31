@@ -1,8 +1,10 @@
 body {
-  
-    margin: 0;
+
+    margin: 20;
     font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
-    background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/background_beach.jpeg);
+    /* background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/background_beach.jpeg); */
+    background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/field.jpg);
+    
     background-position: center;
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -28,63 +30,68 @@ body {
     align-items: center;
     border-style: solid;
     border-width: 10px;
-    color: blue;
+    color: #1f90ff;
 
     
   }
   
-  /* #board {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-  } */
-
+  #turn {
+    font-size: 18px;
+    /* font-weight: bold; */
+    width: 200px;
+    background-color: #1f90ff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+  }
   
   .column {
     display: inline-flex;
     flex-flow: column wrap;
     height:420px;
     
+    
   }
   
   .right {
     border-style: solid;
     border-right-width: 10px;
-    color: blue;
-
+    color: #1f90ff;
+    
   }
   
   .left {
     border-style: solid;
     border-left-width: 10px;
-    color: blue;
+    color: #1f90ff;
     height: 420px;
     width: 0px;
   }
-
+  
   .middle {
     border-style: solid;
     border-top-width: 10px;
     border-bottom-width: 10px;
-    color: blue;
+    color: #1f90ff;
   }
   
-
-
   
- 
+  
+  
+  
   
   /* Disc */
   .disc {
     border-style: solid;
     border-width: 5px;
     
-
+    
     position: relative;
     top: 0;
     width: 60px;
     height: 60px;
-    color: blue;
-    background-image: radial-gradient(white, rgba(133, 133, 252, 0.342), blue);
+    color: #1f90ff;
+    background-image: radial-gradient(white, rgba(133, 133, 252, 0.342), #1f90ff);
     /* background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png"); */
     /* opacity: 0;
     pointer-events: none;
@@ -103,7 +110,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
   }
   
   /* player 2 chip */
@@ -115,10 +122,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
   }
   
-   
+  
   
   
   
@@ -138,13 +145,8 @@ body {
     outline: none;
     
   }
-   
-  button:active {
-    background-color: #6eb9f7;
-    background-size: 100%;
-
-  }
   
+
   @keyframes outcome {
     0% {
       opacity: 0;
@@ -155,4 +157,24 @@ body {
     100% {
       opacity: 1;
     }
+  }
+  
+  #players {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  #players td, #players th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #players tr:nth-child(even){background-color: #f2f2f2;}
+  #players tr:nth-child(odd){background-color: #80bfff;}
+  #players th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1f90ff;
+    color: white;
   }

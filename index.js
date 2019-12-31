@@ -3,10 +3,20 @@
 // child.innerHTML = "We hit MVP"
 // parentNode.appendChild(child)
 const board = document.getElementById('board')
+const body = document.getElementsByTagName('body')[0]
+const gameBoard = document.getElementById('game')
+
+
+let rulesButton = document.getElementById('rules')
+let rules = document.createElement('div')
+rules.innerHTML = "Make a straight line of four Sindys; the line can be vertical, horizontal or diagonal."
+
+let leaderboard = document.createElement('div')
+leaderboard.id = "leaderboard"
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
-    console.log(board)
+    // console.log(board)
     let turn = "Player 1"
     let turnDiv = document.getElementById('turn')
 
@@ -491,14 +501,83 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
  }
-
- let rulesButton = document.getElementById('rules')
- rulesButton.addEventListener("click", e=> {
-     alert("Make a straight line of four Sindys; the line can be vertical, horizontal or diagonal.")
- })
-
-
-
+ 
+ 
+ // leaderboard
+ let leaderboardButton = document.getElementById('leaderboard')
+ leaderboardButton.addEventListener("click", e=> {
+    
+     leaderboard.innerHTML = `
+     <table id="players">
+     <tr>
+     <th>Player</th>
+     <th>Wins</th>
+     <th>Attempts</th>
+     </tr>
+     <tr>
+     <td>Alfreds Futterkiste</td>
+     <td>Maria Anders</td>
+     <td>Germany</td>
+     </tr>
+     <tr>
+     <td>Berglunds snabbköp</td>
+     <td>Christina Berglund</td>
+     <td>Sweden</td>
+     </tr>
+     <tr>
+     <td>Centro comercial Moctezuma</td>
+     <td>Francisco Chang</td>
+     <td>Mexico</td>
+     </tr>
+     <tr>
+     <td>Ernst Handel</td>
+     <td>Roland Mendel</td>
+     <td>Austria</td>
+     </tr>
+     <tr>
+     <td>Island Trading</td>
+     <td>Helen Bennett</td>
+     <td>UK</td>
+     </tr>
+     <tr>
+     <td>Königlich Essen</td>
+     <td>Philip Cramer</td>
+     <td>Germany</td>
+     </tr>
+     <tr>
+     <td>Laughing Bacchus Winecellars</td>
+     <td>Yoshi Tannamuri</td>
+     <td>Canada</td>
+     </tr>
+     <tr>
+     <td>Magazzini Alimentari Riuniti</td>
+     <td>Giovanni Rovelli</td>
+     <td>Italy</td>
+     </tr>
+     <tr>
+     <td>North/South</td>
+     <td>Simon Crowther</td>
+     <td>UK</td>
+     </tr>
+     <tr>
+     <td>Paris spécialités</td>
+     <td>Marie Bertrand</td>
+     <td>France</td>
+     </tr>
+     </table>
+     
+     
+     `
+     if (gameBoard.parentNode == body) {body.replaceChild(leaderboard, gameBoard)
+     } else { body.replaceChild(leaderboard, rules) }
+    }) 
+    
+    rulesButton.addEventListener("click", e=> {
+       let leaderboard = document.getElementById('leaderboard')
+        if (gameBoard.parentNode == body) {body.replaceChild(rules, gameBoard)
+       } else { body.replaceChild(rules, leaderboard) }
+     }
+    )
 
  // end of coding space
 });
