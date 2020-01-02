@@ -1,4 +1,4 @@
-body {
+  body {
 
     margin: 20;
     font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
@@ -24,17 +24,22 @@ body {
   #board {
     display: flex;
     position: relative;
-    left: 30px;
     width: 490px;
     height: 420px;
     align-items: center;
     border-style: solid;
     border-width: 10px;
     color: #1f90ff;
-
+    margin: auto
     
   }
   
+  .general{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
   .turn {
     font-size: 18px;
     /* font-weight: bold; */
@@ -42,8 +47,22 @@ body {
     background-color: #1f90ff;
     color: #fff;
     text-align: center;
-    padding: 8px 10px;
+    padding: 8px 20px;
+    margin: auto;
   }
+
+  .rules {
+    font-size: 18px;
+    /* font-weight: bold; */
+    width: 300px;
+    background-color: #1f90ff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    margin: auto;
+  }
+
+  
   
   .column {
     display: inline-flex;
@@ -130,9 +149,9 @@ body {
   
   
   
-  /* Button style */
+  /* Buttons at bottom */
   button {
-    margin: 20px auto;
+    margin:  auto ;
     border: none;
     border-radius: 2px;
     padding: 12px 18px;
@@ -143,21 +162,32 @@ body {
     background: #2196f3 center;
     box-shadow: 0 0 4px #999;
     outline: none;
+
     
   }
   
-
-  @keyframes outcome {
-    0% {
-      opacity: 0;
-    }
-    35% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  .buttons{
+    margin: auto;
+    width: 27.5%;
+    padding: 10px;
   }
+
+  img {
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* margin: auto; */
+    width: 18%;
+    /* padding: 10px; */
+    height: 30%;
+
+    /* position: relative;
+    align-self: center; */
+
+  }
+
   
   #players {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

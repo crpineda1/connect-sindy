@@ -5,10 +5,11 @@
 const board = document.getElementById('board')
 const body = document.getElementsByTagName('body')[0]
 const gameBoard = document.getElementById('game')
-let player1Form = document.createElement('form')
-player1Form.id = "logIn"
-player1Form.className = "turn"
+let player1Form = document.createElement('div')
 player1Form.innerHTML = `
+<br>
+<br>
+<form id="logIn" class="turn">
 Player 1 Name:
 <br>
 <br>
@@ -16,19 +17,37 @@ Player 1 Name:
 <br>
 <br>
 <input type="submit" value="Submit">
+</form>
+<br>
+<br>
 `
 
-let player2Form = document.createElement('form')
-player2Form.id = "logIn"
-player2Form.className = "turn"
+let p1Image = document.getElementById('p1_image')
+let p2Image = document.createElement('img')
+p2Image.id = "p2_image"
+p2Image.className = "loginImages"
+p2Image.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png"
+
+let rulesImage = document.createElement('img')
+rulesImage.id = "rules_image"
+rulesImage.className = "loginImages"
+rulesImage.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/rules.jpg"
+
+let player2Form = document.createElement('div')
 player2Form.innerHTML = `
+<br>
+<br>
+<form id="logIn" class="turn">
 Player 2 Name:
 <br>
 <br>
 <input type="text" name="name">
 <br>
 <br>
-<input type="submit" value="Start Game">
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
 `
 
 let player1 = null
@@ -36,8 +55,15 @@ let player2 = null
 
 let rulesButton = document.getElementById('rules')
 let rules = document.createElement('div')
-rules.className = "turn"
-rules.innerHTML = "Make a straight line of four Sindys; the line can be vertical, horizontal or diagonal."
+rules.innerHTML = `
+
+<br>
+<div class="rules">
+To play, click on a column on the game board to place your Sindy chip. To win, connect 4 of your chips vertically, horizontally, or diagonally. The game will end in a tie if neither player is able to connect 4 chips.
+</div>
+
+<br>
+`
 
 let leaderboard = document.createElement('div')
 leaderboard.id = "leaderboard"
@@ -52,6 +78,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
          e.preventDefault()
          body.replaceChild(player2Form, player1Form)
         player1 = e.target.name.value
+        body.replaceChild(p2Image,p1Image)
+
+
 
 
 
@@ -63,8 +92,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
         body.replaceChild(gameBoard, player2Form)
         player2 = e.target.name.value
         turnDiv.textContent = `Current Turn: ${player1}`
+        p2Image.remove()
     })
     
+  //show chip while hovering on column, need to add space for col 0 to allow this to work
+    // board.addEventListener("mouseover", e=> {
+    //     console.log(e.target.dataset.x)
+    //     let column = e.target.dataset.x
+    //     let row = 0
+    //     let current = document.querySelector(`[data-x='${column}'][data-y='${row}']`)
+    //     if (turn === "Player 1"){current.id = "p1"} else{current.id = "p2"}
+    // })
+
+
     board.addEventListener("click", e => {     
         let column = e.target.dataset.x
         let row = 1
@@ -363,11 +403,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
         console.log("countD:",countD)
         console.log("countU:",countU)
         if (countV >=4 || countH >=4 || countD >=4 || countU >=4) {
-            if (turn == "Player 1") {alert(`${player1} wins!!`)}
-            else {alert(`${player2} wins!!`)}
-            window.location.reload()
+            if (turn == "Player 1") {
+                alert(`${player1} wins!!`)
+                logGame(player1,player2,player1)
+
+            }
+            else {
+                alert(`${player2} wins!!`)
+                logGame(player1,player2,player2)
+
+            }
+            
         }
         checkTie()
+        
     }
 
  function checkTie() {
@@ -376,56 +425,129 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let allChips = p1Chips + p2Chips
     if (allChips === 42) {
         alert("You both suck... Try again!")
-        window.location.reload()
+        logGame(player1,player2,"tie")
+        createLeaderboard()
     }
+    
  }
  
  // leaderboard
  let leaderboardButton = document.getElementById('leaderboard')
- leaderboardButton.addEventListener("click", e=> {
-     leaderboard.innerHTML = `
-     <table id="players">
-     <tr>
-     <th>Game</th>
-     <th>Player 1</th>
-     <th>Player 2</th>
-     <th>Winner</th>
-     </tr>
-     </table>
-     `
-     fetch('http://localhost:3000/api/v1/games')
-     .then(response => {response.json()})
-     .then(games => {
-         console.dir(games)
+ function createLeaderboard() {
+    let currentImage = document.getElementsByTagName('img')[0]
+        
+    leaderboard.innerHTML = `
+    <br>
+    <br>
+    <table id="players" class="general">
+    <tr>
+    <th>Game</th>
+    <th>Player 1</th>
+    <th>Player 2</th>
+    <th>Winner</th>
+    </tr>
+    </table>
+    <br>
+    <br>
+    `
+    fetch('http://localhost:3000/api/v1/games')
+    .then(response => response.json())
+    .then(games => {
         games.forEach( game => {
-             let newTr = document.createElement('tr')
-             newTr.innerHTML = `
-             <td>"${game.id}"</td>
-             <td>"${game.player_1}"</td>
-             <td>"${game.player_2}"</td>
-             <td>"${game.winner}"</td>     
-             `
-             let table = document.getElementById('players')
-             table.appendChild(newTr)
-         })
-     })
-
-     if (gameBoard.parentNode == body) {body.replaceChild(leaderboard, gameBoard)
-     } else if (rules.parentNode == body) { body.replaceChild(leaderboard, rules) 
-      } else {body.replaceChild(leaderboard, player1Form)}
+            let newTr = document.createElement('tr')
+            newTr.innerHTML = `
+            <td>${game.id}</td>
+            <td>${game.player_1}</td>
+            <td>${game.player_2}</td>
+            <td>${game.winner}</td>     
+            `
+            let table = document.getElementById('players')
+            table.appendChild(newTr)
+        })
     })
 
+    switch (body) {
+        case gameBoard.parentNode:
+            body.replaceChild(leaderboard, gameBoard)
+            currentImage.remove()
+            break;
+        case rules.parentNode:
+            body.replaceChild(leaderboard, rules)
+            currentImage.remove()
+            break;
+        case player1Form.parentNode:
+            body.replaceChild(leaderboard, player1Form)
+            currentImage.remove()
+            break;
+        case player2Form.parentNode:
+            body.replaceChild(leaderboard, player2Form)
+            currentImage.remove()
+            break;
+        default:
+            break;
+    }
+}
+    leaderboardButton.addEventListener("click", e=> {
+       createLeaderboard()    
+
+    })
+    
+    
     //rules
     rulesButton.addEventListener("click", e=> {
-       let leaderboard = document.getElementById('leaderboard')
-        if (gameBoard.parentNode == body) {body.replaceChild(rules, gameBoard)
-       } else if (leaderboard.parentNode == body) { body.replaceChild(rules, leaderboard) }
-     else { body.replaceChild(rules, player1Form) }}
-    )
+        let leaderboard = document.getElementById('leaderboard')
+        let currentImage = document.getElementsByTagName('img')[0]
+               
+       switch (body) {
+        case gameBoard.parentNode:
+            body.replaceChild(rules, gameBoard)
+            body.appendChild(rulesImage)
+            break;
+        case leaderboard.parentNode:
+            body.replaceChild(rules, leaderboard)
+            body.appendChild(rulesImage)
+            break;
+        case player1Form.parentNode:
+            body.replaceChild(rules, player1Form)
+            body.replaceChild(rulesImage,currentImage)
+            break;
+        case player2Form.parentNode:
+            body.replaceChild(rules, player2Form)
+            body.replaceChild(rulesImage,currentImage)
+            break;
+        default:
+            break;
+    }
+       
+       
+    //    if (gameBoard.parentNode == body) {body.replaceChild(rules, gameBoard)
+    //    } else if (leaderboard.parentNode == body) { body.replaceChild(rules, leaderboard) }
+    //  else { body.replaceChild(rules, player1Form) }
+    })
 
+    function logGame(player1,player2,winner) {
+
+        fetch('http://localhost:3000/api/v1/games',{
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "player_1": player1,
+                "player_2": player2,
+                "winner": winner 
+            })
+        })
+        .then(resp => resp.json())
+        .then(data => createLeaderboard())
+
+    }
 
  // end of coding space
 });
 
 // end of code
+
+
 
