@@ -1,20 +1,18 @@
-
 <head>
     <meta charset="utf-8">
     <title>Connect "FOR"</title>
-    <title>(a.k.a "Connect "FOR"</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Connect Sindy</h1>
-    <div id="game" class = "general">   
+    <h1>🐮 Connect Sindy 🐮</h1>
+    <div id="game" class="general">   
         <div id = "turn" class="turn ">Current Turn: Player 1 
         </div>
         <br>
 
         <div id="board">
             <!-- Column 0 -->
-            <div class=" column ">
+            <div class=column">
                 <div data-x = "0" data-y = "0" id = "" ></div>
                 <div data-x = "0" data-y = "1" id = "" ></div>
                 <div data-x = "0" data-y = "2" id = "" ></div>
@@ -26,7 +24,7 @@
             <!-- Column 1 -->
             <div class="column" >
                 <div data-x = "1" data-y = "0" id = "" ></div>
-                <div data-x = "1" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "1" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "1" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "1" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "1" data-y = "4" id = "" class="disc"></div>
@@ -36,7 +34,7 @@
             <!--Column 2 -->
             <div class="column">
                 <div data-x = "2" data-y = "0" id = "" ></div>
-                <div data-x = "2" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "2" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "2" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "2" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "2" data-y = "4" id = "" class="disc"></div>
@@ -46,7 +44,7 @@
             <!--Column 3 -->
             <div class="column">
                 <div data-x = "3" data-y = "0" id = "" ></div>
-                <div data-x = "3" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "3" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "3" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "3" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "3" data-y = "4" id = "" class="disc"></div>
@@ -56,7 +54,7 @@
                 <!--Column 4 -->
             <div class="column">
                 <div data-x = "4" data-y = "0" id = "" ></div>
-                <div data-x = "4" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "4" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "4" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "4" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "4" data-y = "4" id = "" class="disc"></div>
@@ -66,7 +64,7 @@
                 <!--Column 5 -->
             <div class="column">
                 <div data-x = "5" data-y = "0" id = "" ></div>
-                <div data-x = "5" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "5" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "5" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "5" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "5" data-y = "4" id = "" class="disc"></div>
@@ -76,7 +74,7 @@
             <!--Column 6 -->
             <div class="column">
                 <div data-x = "6" data-y = "0" id = "" ></div>
-                <div data-x = "6" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "6" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "6" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "6" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "6" data-y = "4" id = "" class="disc"></div>
@@ -86,7 +84,7 @@
                 <!--Column 7 -->
             <div class="column">
                 <div data-x = "7" data-y = "0" id = "" ></div>
-                <div data-x = "7" data-y = "1" id = "" class="disc"></div>
+                <div data-x = "7" data-y = "1" data-h = "1" id = "" class="disc"></div>
                 <div data-x = "7" data-y = "2" id = "" class="disc"></div>
                 <div data-x = "7" data-y = "3" id = "" class="disc"></div>
                 <div data-x = "7" data-y = "4" id = "" class="disc"></div>
@@ -94,7 +92,7 @@
                 <div data-x = "7" data-y = "6" id = "" class="disc"></div>
                 <div data-x = "7" data-y = "7" id = "" ></div>
                 <!-- Column 8 -->
-            <div class="column ">
+            <div class="column">
                 <div data-x = "8" data-y = "0" id = "" ></div>
                 <div data-x = "8" data-y = "1" id = "" ></div>
                 <div data-x = "8" data-y = "2" id = "" ></div>
@@ -106,18 +104,26 @@
             </div></div></div></div></div></div></div></div></div>
         </div>
     </div>
-    <div class = "buttons">
+    <div class="buttons">
     <button id = "newGame" type="button">New Game</button>
     <button id = "rules" type="button">Rules</button>
     <button id = "leaderboard" type="button">Game History</button>
     </div>
 
+    <img id= "p1_image" class="loginImages" src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png">
+    <br>
+    <br>
+    <br>
+    <br>
 
-        <img id= "p1_image" class = "loginImages" src= "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png">
-
-        
+    <footer> 
+        <!-- <br> -->
+        Copyright © 2019-2020 Sindy's Skeinz Ltd. 🐄 🧶
+        <br>
+        Made by Carlos Pineda and Jen Lindner 
+        <br>
+    </footer>    
        
-
     <script type="text/javascript" src='index.js'></script>
 </body>
 

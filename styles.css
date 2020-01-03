@@ -1,25 +1,23 @@
   body {
-
     margin: 20;
-    font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
-    /* background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/background_beach.jpeg); */
+    font-family: "Marker Felt", "Helvetica", "Verdana", "Roboto", sans-serif;
     background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/field.jpg);
-    
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-size: cover;
   }
-  
+
   h1 {
     margin: 0 0 15px;
+    font-family: "Marker Felt", "Helvetica", "Verdana", "Roboto", sans-serif;
     padding: 15px;
-    color: #fff;
     font-size: 40px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
-    background-color: #1f90ff;
+    background-color: #1F90FF;
+    background: rgba(69, 113, 179, 0.3);
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
   }
-  
   
   #board {
     display: flex;
@@ -31,9 +29,14 @@
     border-width: 10px;
     color: #1f90ff;
     margin: auto
-    
   }
   
+  .column {
+    display: inline-flex;
+    flex-flow: column wrap;
+    height:420px; 
+  }
+
   .general{
     margin: auto;
     width: 50%;
@@ -61,23 +64,6 @@
     padding: 8px 20px;
     margin: auto;
   }
-
-  
-  
-  .column {
-    display: inline-flex;
-    flex-flow: column wrap;
-    height:420px;
-    
-    
-  }
-  
-  .right {
-    border-style: solid;
-    border-right-width: 10px;
-    color: #1f90ff;
-    
-  }
   
   .left {
     border-style: solid;
@@ -93,61 +79,44 @@
     border-bottom-width: 10px;
     color: #1f90ff;
   }
-  
-  
-  
-  
-  
+
+  .right {
+    border-style: solid;
+    border-right-width: 10px;
+    color: #1f90ff;
+  }
   
   /* Disc */
   .disc {
     border-style: solid;
     border-width: 5px;
-    
-    
     position: relative;
     top: 0;
     width: 60px;
     height: 60px;
     color: #1f90ff;
     background-image: radial-gradient(white, rgba(133, 133, 252, 0.342), #1f90ff);
-    /* background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png"); */
-    /* opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s; */
-    /* z-index:10 */
   }
-  
-  
   
   /* player 1 chip */
   #p1{
     background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png");
-    /* z-index:9; */
     width: 60px;
     height: 60px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
   }
   
   /* player 2 chip */
   #p2{
     background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png");
-    /* z-index:9; */
     width: 60px;
     height: 60px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
   }
-  
-  
-  
-  
-  
   
   /* Buttons at bottom */
   button {
@@ -162,13 +131,12 @@
     background: #2196f3 center;
     box-shadow: 0 0 4px #999;
     outline: none;
-
-    
+    font-family: "Marker Felt", "Helvetica", "Verdana", "Roboto", sans-serif;
   }
   
   .buttons{
     margin: auto;
-    width: 27.5%;
+    width: 25.5%;
     padding: 10px;
   }
 
@@ -177,18 +145,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    /* margin: auto; */
     width: 18%;
-    /* padding: 10px; */
     height: 30%;
-
-    /* position: relative;
-    align-self: center; */
-
   }
 
-  
+  /* leaderboard */
   #players {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -199,6 +160,7 @@
     border: 1px solid #ddd;
     padding: 8px;
   }
+
   #players tr:nth-child(even){background-color: #f2f2f2;}
   #players tr:nth-child(odd){background-color: #80bfff;}
   #players th {
@@ -210,16 +172,32 @@
   }
   
   /* to make the disk hover on each disc, only p1 */
-  /* .disc:hover {
+  div[data-h='1']:hover {
     background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png");
-    /* z-index:9; */
     width: 60px;
     height: 60px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  } */
+  }
 
-  /* .column:hover {
-    background-color: yellow;
-  } */
+  div[data-h='2']:hover {
+    background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png");
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1F90FF;
+  background: rgba(69, 113, 179, 0.3);
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
