@@ -171,7 +171,7 @@
     color: white;
   }
   
-  /* to make the disk hover on each disc, only p1 */
+  /* p1 disk hover on each disc */
   div[data-h='1']:hover {
     background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png");
     width: 60px;
@@ -181,6 +181,7 @@
     background-size: cover;
   }
 
+  /* p2 disk hover on each disc */
   div[data-h='2']:hover {
     background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png");
     width: 60px;
