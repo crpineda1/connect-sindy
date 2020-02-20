@@ -22,12 +22,12 @@ let p1Image = document.getElementById('p1_image')
 let p2Image = document.createElement('img')
 p2Image.id = "p2_image"
 p2Image.className = "loginImages"
-p2Image.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png"
+p2Image.src = "/Users/Carlos/Development/code/03_Mod_3/MOD_3_PROJ/connect-4-JS/images/cow2.png"
 
 let rulesImage = document.createElement('img')
 rulesImage.id = "rules_image"
 rulesImage.className = "loginImages"
-rulesImage.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/rules.jpg"
+rulesImage.src = "/Users/Carlos/Development/code/03_Mod_3/MOD_3_PROJ/connect-4-JS/images/rules.jpg"
 
 let player2Form = document.createElement('div')
 player2Form.innerHTML = `
@@ -82,7 +82,7 @@ function sound(src) {
   }
 
    // sounds to be used
-  let chipSound = new sound("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/sounds/chip.m4a")
+  let chipSound = new sound("sounds/chip.m4a")
   let mooSound = new sound("sounds/Moo2.m4a")
   let loserSound = new sound("sounds/loser.m4a")
 
@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         p2Image.remove()
     })
     
-    // make the chip drown down the column 
+    // make the chip drop animation 
     function chipAppear(turn,current,row,column){
         console.log(turn)
         console.log("row:",row)
@@ -549,3 +549,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+ 
