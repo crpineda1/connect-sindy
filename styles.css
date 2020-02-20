@@ -1,7 +1,7 @@
   body {
     margin: 20;
     font-family: "Marker Felt", "Helvetica", "Verdana", "Roboto", sans-serif;
-    background-image: url(/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/field.jpg);
+    background-image: url(images/field.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -45,7 +45,6 @@
 
   .turn {
     font-size: 18px;
-    /* font-weight: bold; */
     width: 200px;
     background-color: #1f90ff;
     color: #fff;
@@ -56,7 +55,6 @@
 
   .rules {
     font-size: 18px;
-    /* font-weight: bold; */
     width: 300px;
     background-color: #1f90ff;
     color: #fff;
@@ -100,7 +98,7 @@
   
   /* player 1 chip */
   #p1{
-    background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png");
+    background-image: url(images/cow1.png);
     width: 60px;
     height: 60px;
     background-position: center;
@@ -110,7 +108,7 @@
   
   /* player 2 chip */
   #p2{
-    background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png");
+    background-image: url(images/cow2.png);
     width: 60px;
     height: 60px;
     background-position: center;
@@ -173,7 +171,7 @@
   
   /* p1 disk hover on each disc */
   div[data-h='1']:hover {
-    background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow1.png");
+    background-image: url(images/cow1.png);
     width: 60px;
     height: 60px;
     background-position: center;
@@ -183,7 +181,7 @@
 
   /* p2 disk hover on each disc */
   div[data-h='2']:hover {
-    background-image: url("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png");
+    background-image: url(images/cow2.png);
     width: 60px;
     height: 60px;
     background-position: center;

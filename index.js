@@ -82,7 +82,7 @@ function sound(src) {
   }
 
    // sounds to be used
-  let chipSound = new sound("/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/sounds/chip.m4a")
+  let chipSound = new sound("sounds/chip.m4a")
   let mooSound = new sound("sounds/Moo2.m4a")
   let loserSound = new sound("sounds/loser.m4a")
 
