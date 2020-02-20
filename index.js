@@ -22,12 +22,12 @@ let p1Image = document.getElementById('p1_image')
 let p2Image = document.createElement('img')
 p2Image.id = "p2_image"
 p2Image.className = "loginImages"
-p2Image.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/cow2.png"
+p2Image.src = "images/cow2.png"
 
 let rulesImage = document.createElement('img')
 rulesImage.id = "rules_image"
 rulesImage.className = "loginImages"
-rulesImage.src = "/Users/Carlos/Development/code/MOD_3_PROJ/connect-4-JS/images/rules.jpg"
+rulesImage.src = "images/rules.jpg"
 
 let player2Form = document.createElement('div')
 player2Form.innerHTML = `
