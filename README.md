@@ -7,6 +7,6 @@ The frontend can be run from the main directory, with an 'open index.html' comma
 
 To see the demo video for this project, please following this link: https://drive.google.com/open?id=1dGSxmxCqCuMURnNM6Gb8tGScieXGiX9S
 
-If you have any question feel free to contact us:
+If you have any questions, feel free to contact us:
 Carlos: carlos.r.pineda@gmail.com
 Jen: jenlindner22@gmail.com
