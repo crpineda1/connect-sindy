@@ -4181,3 +4181,31 @@ Processing by Api::V1::GamesController#index as */*
 Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1022)
 
 
+Started GET "/api/v1/games" for ::1 at 2020-02-26 20:38:10 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (6.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 11.8ms | ActiveRecord: 24.2ms | Allocations: 5406)
+
+
+Started POST "/api/v1/games" for ::1 at 2020-02-27 23:40:43 -0500
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"player_1"=>"Jen", "player_2"=>"andy", "winner"=>"Jen", "game"=>{"player_1"=>"Jen", "player_2"=>"andy", "winner"=>"Jen"}}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[36mGame Create (22.6ms)[0m  [1m[32mINSERT INTO "games" ("player_1", "player_2", "winner", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["player_1", "Jen"], ["player_2", "andy"], ["winner", "Jen"], ["created_at", "2020-02-28 04:40:43.551726"], ["updated_at", "2020-02-28 04:40:43.551726"]]
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+Completed 200 OK in 59ms (Views: 1.6ms | ActiveRecord: 57.0ms | Allocations: 6122)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-27 23:40:43 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 1119)
+
+
