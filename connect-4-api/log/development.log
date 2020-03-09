@@ -3816,6 +3816,7 @@ Processing by Api::V1::GamesController#index as HTML
 Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 4.5ms | Allocations: 2135)
 
 
+<<<<<<< HEAD
 Started GET "/api/v1/games" for ::1 at 2020-01-06 13:11:27 -0500
   [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Api::V1::GamesController#index as */*
@@ -3883,6 +3884,31 @@ Started GET "/usergames" for ::1 at 2020-02-13 13:54:55 -0500
 ActionController::RoutingError (No route matches [GET] "/usergames"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+Started GET "/api/v1/games" for ::1 at 2020-02-20 14:18:00 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "connect_4_api_development" does not exist
+):
+  
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.2.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -3905,10 +3931,36 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+Started POST "/api/v1/games" for ::1 at 2020-02-20 14:23:42 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "connect_4_api_development" does not exist
+):
+  
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.2.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -3931,12 +3983,38 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/usergames" for ::1 at 2020-02-13 13:55:12 -0500
 Started GET "/users" for ::1 at 2020-02-13 13:55:12 -0500
   
 ActionController::RoutingError (No route matches [GET] "/usergames"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+Started GET "/api/v1/games" for ::1 at 2020-02-20 14:23:42 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "connect_4_api_development" does not exist
+):
+  
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.2.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.2.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -3959,10 +4037,33 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+  [1m[35m (471.8ms)[0m  [1m[35mCREATE DATABASE "connect_4_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (158.9ms)[0m  [1m[35mCREATE DATABASE "connect_4_api_test" ENCODING = 'unicode'[0m
+Started POST "/api/v1/games" for ::1 at 2020-02-20 16:17:09 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -3985,6 +4086,7 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2020-02-20 13:53:22 -0500
   [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Rails::WelcomeController#index as HTML
@@ -3998,6 +4100,25 @@ Started GET "/game" for ::1 at 2020-02-20 13:53:27 -0500
 ActionController::RoutingError (No route matches [GET] "/game"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+Started GET "/api/v1/games" for ::1 at 2020-02-20 16:17:09 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -4020,11 +4141,73 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/games" for ::1 at 2020-02-20 16:17:17 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/games" for ::1 at 2020-02-20 13:53:28 -0500
   
 ActionController::RoutingError (No route matches [GET] "/games"):
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
+Started GET "/" for ::1 at 2020-02-20 16:19:07 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -4047,6 +4230,7 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2020-02-20 13:56:06 -0500
 Processing by Rails::WelcomeController#index as HTML
   Rendering /Users/Carlos/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
@@ -4092,5 +4276,101 @@ Processing by Api::V1::GamesController#index as */*
   [1m[36mGame Load (4.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
   ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
 Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 4.3ms | Allocations: 2381)
+=======
+  [1m[35m (97.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3425015044240266225)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20191231183402)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "player_1" character varying, "player_2" character varying, "winner" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (10.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191231183402"]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-20 21:19:25.268698"], ["updated_at", "2020-02-20 21:19:25.268698"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3425015044240266225)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-20 16:19:36 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Jennifer/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Jennifer/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 43.5ms | Allocations: 316)
+Completed 200 OK in 64ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 1603)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-20 16:19:43 -0500
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (30.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 56ms (Views: 4.3ms | ActiveRecord: 38.5ms | Allocations: 1728)
+
+
+Started POST "/api/v1/games" for ::1 at 2020-02-20 16:20:02 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"player_1"=>"Jen", "player_2"=>"Another Jen", "winner"=>"Jen", "game"=>{"player_1"=>"Jen", "player_2"=>"Another Jen", "winner"=>"Jen"}}
+  [1m[35m (14.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[36mGame Create (12.9ms)[0m  [1m[32mINSERT INTO "games" ("player_1", "player_2", "winner", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["player_1", "Jen"], ["player_2", "Another Jen"], ["winner", "Jen"], ["created_at", "2020-02-20 21:20:02.101071"], ["updated_at", "2020-02-20 21:20:02.101071"]]
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 69.1ms | Allocations: 6023)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-20 16:20:02 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (2.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 2.8ms | Allocations: 891)
+
+
+Started POST "/api/v1/games" for ::1 at 2020-02-20 16:30:21 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"player_1"=>"Jen", "player_2"=>"Aileen", "winner"=>"Jen", "game"=>{"player_1"=>"Jen", "player_2"=>"Aileen", "winner"=>"Jen"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[36mGame Create (1.2ms)[0m  [1m[32mINSERT INTO "games" ("player_1", "player_2", "winner", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["player_1", "Jen"], ["player_2", "Aileen"], ["winner", "Jen"], ["created_at", "2020-02-20 21:30:21.643944"], ["updated_at", "2020-02-20 21:30:21.643944"]]
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 2317)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-20 16:30:21 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1022)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-26 20:38:10 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (6.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 11.8ms | ActiveRecord: 24.2ms | Allocations: 5406)
+
+
+Started POST "/api/v1/games" for ::1 at 2020-02-27 23:40:43 -0500
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"player_1"=>"Jen", "player_2"=>"andy", "winner"=>"Jen", "game"=>{"player_1"=>"Jen", "player_2"=>"andy", "winner"=>"Jen"}}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[36mGame Create (22.6ms)[0m  [1m[32mINSERT INTO "games" ("player_1", "player_2", "winner", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["player_1", "Jen"], ["player_2", "andy"], ["winner", "Jen"], ["created_at", "2020-02-28 04:40:43.551726"], ["updated_at", "2020-02-28 04:40:43.551726"]]
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/games_controller.rb:10:in `create'
+Completed 200 OK in 59ms (Views: 1.6ms | ActiveRecord: 57.0ms | Allocations: 6122)
+
+
+Started GET "/api/v1/games" for ::1 at 2020-02-27 23:40:43 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/api/v1/games_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 1119)
+>>>>>>> 97f3d6c0bc82f5dee089a7d13585cca210d3112c
 
 
