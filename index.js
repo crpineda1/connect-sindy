@@ -76,9 +76,6 @@ function sound(src) {
     this.play = function(){
       this.sound.play();
     }
-    // this.stop = function(){
-    //   this.sound.pause();
-    // }
   }
 
    // sounds to be used
