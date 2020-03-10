@@ -544,9 +544,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         .then(data => createLeaderboard())
     }
 
-    
-    
-
  // end of coding space
 });
 
