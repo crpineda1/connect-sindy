@@ -410,11 +410,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (countV >=4 || countH >=4 || countD >=4 || countU >=4) {
             mooSound.play()
             if (turn == "Player 1") {
-                // mooSound.play()
                 alert(`${player1} wins!!`)
                 logGame(player1,player2,player1)
             } else {
-                // mooSound.play()
                 alert(`${player2} wins!!`)
                 logGame(player1,player2,player2)
             }   
