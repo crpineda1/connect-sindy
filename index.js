@@ -270,7 +270,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // end of board event listener
 
 
-
+    
     let newGameButton = document.getElementById('newGame')
     newGameButton.addEventListener('click', e => {
         console.log("new game button pressed")
@@ -455,7 +455,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     <br>
     <br>
     `
-    fetch('http://localhost:3000/games')
+    fetch('http://localhost:3000/api/v1/games')
     .then(response => response.json())
     .then(games => {
         games.forEach( game => {
@@ -525,7 +525,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
     function logGame(player1,player2,winner) {
-        fetch('http://localhost:3000/games',{
+        fetch('http://localhost:3000/api/v1/games',{
             method: "POST",
             headers: {
                 'Accept': 'application/json',
