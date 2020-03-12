@@ -269,6 +269,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }) 
     // end of board event listener
 
+
+    
     let newGameButton = document.getElementById('newGame')
     newGameButton.addEventListener('click', e => {
         console.log("new game button pressed")
