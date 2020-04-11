@@ -6,6 +6,7 @@ To run the backend of this application, cd into the connect-4-api directory befo
 The frontend can be run from the main directory, with an 'open index.html' command in the terminal.
 
 To see the demo video for this project, please follow this link: https://youtu.be/8KTaedHbPLw
+
 Please check out the game deployed on Heroku: https://connect-sindy-frontend.herokuapp.com/
 
 If you have any questions, feel free to contact us:
